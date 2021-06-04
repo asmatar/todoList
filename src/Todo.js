@@ -30,14 +30,16 @@ function Todo({todos, handleDelete, changeCompleted, setTodos}) {
                             {
                                 todoEditing === todo.id ? (<input type="text" onChange={event => setEditingText(event.target.value)} value={editingText}/>) : (<div className='text'>{todo.text} </div>)
                             }
-                            
-                            
-                            <div className='icons'>  
+                             {
+                                 todoEditing === todo.id ? (<button onClick={event => {editTodo(todo.id)}} >validate </button>) :
+                                 (   <div className='icons'>  
                                 <input type="checkbox" onClick={ () => changeCompleted(todo.id) } />
                                 <span className='span' onClick={() => handleDelete(todo.id)}><FaTrash /></span>
                                 <span className='span' onClick={() => setTodoEditing(todo.id)} ><FaEdit /></span>
-                                <button onClick={event => {editTodo(todo.id)}} >validate </button>
-                            </div>
+                            </div>)
+                             }
+                            
+                         
                         </div>
                     )
                 })
