@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import Header from './Header';
+import Todo from './Todo';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
     <div className='container'>
       <h1>TodoList</h1>
       <Header todoObject={addNewTodo} />
+      <Todo todos={todos}/>
     </div>
   );
 }

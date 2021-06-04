@@ -32,3 +32,20 @@
   input:focus{
       outline: none;
   }
+  form{
+    display: flex;
+
+    button {
+      margin-left: 10px;
+      color: blue;
+      width: 130px;
+      // border-color: red;
+      border: none;
+      background: transparent;
+
+      &:hover{
+        color: rgb(146, 26, 170);
+        border-color: red;
+      }
+    }
+  }

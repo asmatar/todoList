@@ -13,6 +13,7 @@ function Header({todoObject}) {
             id: Math.floor(Math.random() * 100),
             text: inputValue
         })
+        setInputValue('')
     }
 
     return (
@@ -27,7 +28,7 @@ function Header({todoObject}) {
             value={inputValue}
             onChange={(event)=>setInputValue(event.target.value)}
             />
-            <button type='submit'> let's push it !</button>
+            <button type='submit'> click to push it !</button>
         </form>
         </div>
     )

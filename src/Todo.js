@@ -1,11 +1,15 @@
 import React from 'react';
-import './Todo.scss';
+import './todo.scss';
 
-function Todo() {
+function Todo({todos}) {
     return (
-        <div>
-            
-        </div>
+        <div className='todo-container'>
+            {
+                todos.map((todo) => {
+                    return <div key={todo.id} className='todo'> {todo.text}</div>
+                })
+            }
+       </div>
     )
 }
 
