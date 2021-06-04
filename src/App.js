@@ -21,12 +21,26 @@ function App() {
     const deleteTodo = [...todos].filter(item => item.id !== id)
     setTodos(deleteTodo);
   }
+  
+  const changeCompleted = (id) => {
+
+      const taskComplete = todos.findIndex(todo => todo.id === id)
+      console.log('je suis dans chengecompleted', taskComplete, id)
+
+      const newTaskCompleted = [...todos]
+
+      newTaskCompleted[taskComplete] ={
+        ...newTaskCompleted[taskComplete],
+        isCompleted: true
+    }
+    setTodos(newTaskCompleted)
+  }
 
   return (
     <div className='container'>
       <h1>TodoList</h1>
       <Header todoObject={addNewTodo} />
-      <Todo todos={todos} handleDelete={handleDelete} />
+      <Todo todos={todos} handleDelete={handleDelete} changeCompleted={changeCompleted} />
     </div>
   );
 }
