@@ -43,7 +43,7 @@ function App() {
     <div className='container'>
       <h1>TodoList</h1>
       <Header todoObject={addNewTodo} />
-      <Todo todos={todos} handleDelete={handleDelete} changeCompleted={changeCompleted}
+      <Todo todos={todos} handleDelete={handleDelete} changeCompleted={changeCompleted} setTodos={setTodos}
       // setEdit={setEdit}
       />
     </div>
