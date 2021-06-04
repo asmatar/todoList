@@ -7,8 +7,16 @@
 .todo {
         // background-color: rgba(136, 97, 245, 0.609);
         color: white;
-        width: 80%;
+        width: 95%;
         margin: 10px;
         border-bottom: 1px solid red;
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
+}
+.icons{
+    color: white;
+}
+span {
+    padding: 0 5px;
 }
