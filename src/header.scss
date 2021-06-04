@@ -1,0 +1,34 @@
+.input-data{
+    height: 20px;
+    width: 100%;
+    position: relative;
+    outline: none;
+    border: none;
+    margin: 25px 0;
+  }
+.input-data input{
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+    border: none;
+    border-bottom: 2px solid rgb(90, 12, 180);
+}
+// .input-data input:focus ~ label,
+// .input-data input:valid ~ label
+// {
+//     transform: translateY(-20px);
+//     font-size: 15px;
+//     color: #4158d0;
+//     outline: none;
+//   }
+.input-data label{
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+    color: rgb(42, 5, 128);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  input:focus{
+      outline: none;
+  }
