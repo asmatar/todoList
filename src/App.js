@@ -17,12 +17,11 @@ function App() {
 
 
   const handleDelete = (id) => {
-    console.log('je delete dans handle delete', id)
-    
-    const deleteTodo = [...todos].filter(item => item.id !== id)
+
+    const deleteTodo = [...todos].filter(item => item.id !== id); 
     setTodos(deleteTodo);
   } 
-  
+
   
   const changeCompleted = (id) => {
     // we've got the task's id, so we want to stock it in a variable
