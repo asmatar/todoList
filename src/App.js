@@ -35,16 +35,15 @@ function App() {
     // we give the new task list to setTodos to change the state
     setTodos(newTaskCompleted)
   }
-  // const setEdit = (id) => {
-    
-  // }
+
 
   return (
     <div className='container'>
       <h1>TodoList</h1>
       <Header todoObject={addNewTodo} />
-      <Todo todos={todos} handleDelete={handleDelete} changeCompleted={changeCompleted} setTodos={setTodos}
-      // setEdit={setEdit}
+      <Todo todos={todos} handleDelete={handleDelete} changeCompleted={changeCompleted} 
+      // editing todo: pass the props to update the state
+      setTodos={setTodos}
       />
     </div>
   );
