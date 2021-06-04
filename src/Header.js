@@ -30,7 +30,7 @@ function Header({todoObject}) {
             onChange={(event)=>setInputValue(event.target.value)}
             
             />
-            <button type='submit'> Add me !</button>
+            <button className='button' type='submit'> Add me !</button>
         </form>
         </div>
     )

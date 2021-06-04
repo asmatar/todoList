@@ -35,14 +35,14 @@ function Todo({todos, handleDelete, changeCompleted, setTodos}) {
                             {
                                 todoEditing === todo.id ? 
                                 // 3 . we catch the value updating and put it into the state
-                                (<input type="text" onChange={event => setEditingText(event.target.value)} value={editingText}/>) 
+                                (<input className='input' type="text" onChange={event => setEditingText(event.target.value)} value={editingText}/>) 
                                 : 
                                 (<div className='text'>{todo.text} </div>)
                             }
                              {
                                  todoEditing === todo.id ? 
                                 //  4 . button to submit the new todo, callback editTodo (with the id)
-                                 (<button onClick={event => {editTodo(todo.id)}} >validate </button>) 
+                                 (<button className='button' onClick={event => {editTodo(todo.id)}} >validate </button>) 
                                  :
                                  (   <div className='icons'>  
                                 <input type="checkbox" onClick={ () => changeCompleted(todo.id) } />
