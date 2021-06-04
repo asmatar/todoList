@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaEdit, FaTrash } from "react-icons/fa";
 import './todo.scss';
-function Todo({todos}) {
+function Todo({todos, handleDelete}) {
+
+    
     return (
         <div className='todo-container'>
             {
@@ -10,8 +12,8 @@ function Todo({todos}) {
                         <div key={todo.id} className='todo'> 
                             {todo.text} 
                             <div className='icons'>
-                                <span><FaTrash /></span>
-                                <span><FaEdit/></span>
+                                <span onClick={() => handleDelete(todo.id)}><FaTrash /></span>
+                                <span><FaEdit /></span>
                             </div>
                         </div>
                     )

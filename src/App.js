@@ -15,11 +15,18 @@ function App() {
     setTodos(newTodo)
   }
 
+  const handleDelete = (id) => {
+    console.log('je delete dans handle delete', id)
+
+    const deleteTodo = [...todos].filter(item => item.id !== id)
+    setTodos(deleteTodo);
+  }
+
   return (
     <div className='container'>
       <h1>TodoList</h1>
       <Header todoObject={addNewTodo} />
-      <Todo todos={todos}/>
+      <Todo todos={todos} handleDelete={handleDelete} />
     </div>
   );
 }
