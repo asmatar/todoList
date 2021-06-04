@@ -19,14 +19,14 @@
        
 }
 .completed {
-    color: red;
+    color: rgb(0, 110, 255);
     width: 85%;
     height: 35px;
     margin-bottom: 7px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(158, 195, 243);
+    background-color: white;
     border-radius: 4px;
     text-decoration: line-through;
 }
