@@ -19,14 +19,14 @@
        
 }
 .completed {
-    color: rgb(0, 110, 255);
+    color: white;
     width: 85%;
     height: 35px;
     margin-bottom: 7px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(0, 110, 255);
     border-radius: 4px;
     text-decoration: line-through;
 }
@@ -37,7 +37,7 @@
     color: white;
     display: flex;
     width: 40px;
-    padding-right: 7px;
+    padding-right: 15px;
 }
 .span {
     width: 20px;
