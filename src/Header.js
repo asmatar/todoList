@@ -20,15 +20,16 @@ function Header({todoObject}) {
         <div className='input-data'>
             <form onSubmit={handleTodo}
             >
-            <label htmlFor="totodo"> What do you have to do ?</label>
             <input 
+            placeholder='what do you have to do'
             type="text" 
             id='totodo' 
             required 
             value={inputValue}
             onChange={(event)=>setInputValue(event.target.value)}
+            
             />
-            <button type='submit'> click to push it !</button>
+            <button type='submit'> Add me !</button>
         </form>
         </div>
     )

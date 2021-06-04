@@ -1,51 +1,38 @@
 .input-data{
-    height: 20px;
-    width: 100%;
-    position: relative;
-    outline: none;
-    border: none;
-    margin: 25px 0;
-  }
-.input-data input{
-    height: 100%;
-    width: 100%;
-    font-size: 13px;
-    border: none;
-    border-bottom: 2px solid rgb(90, 12, 180);
+    height: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
 }
-// .input-data input:focus ~ label,
-// .input-data input:valid ~ label
-// {
-//     transform: translateY(-20px);
-//     font-size: 15px;
-//     color: #4158d0;
-//     outline: none;
-//   }
-.input-data label{
-    position: absolute;
-    bottom: 20px;
-    left: 35%;
-    color: rgb(42, 5, 128);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
+.input-data input{
+    width: 72%;
+    font-size: 13px;
+    border-color: rgb(146, 26, 170);
+    color: white;
+    border-radius: 4px;
+    background: transparent;
+    display: flex;    
+}
+input::placeholder {
+  color: white;
+}
   input:focus{
       outline: none;
   }
   form{
     display: flex;
+    width: 90%;
+    justify-content: space-between;
+    height: 40px;
 
     button {
-      margin-left: 10px;
-      color: blue;
-      width: 130px;
-      // border-color: red;
-      border: none;
-      background: transparent;
-
-      &:hover{
-        color: rgb(146, 26, 170);
-        border-color: red;
-      }
+      color: white;
+      width: 22%;
+      border-color: rgb(146, 26, 170);
+      background-color: rgb(146, 26, 170);
+      border-radius: 4px;
+      height: 100%;
     }
   }

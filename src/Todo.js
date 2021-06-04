@@ -10,7 +10,7 @@ function Todo({todos, handleDelete}) {
                 todos.map((todo) => {
                     return (
                         <div key={todo.id} className='todo'> 
-                            {todo.text} 
+                            <div className='text'>{todo.text} </div>
                             <div className='icons'>
                                 <span onClick={() => handleDelete(todo.id)}><FaTrash /></span>
                                 <span><FaEdit /></span>
