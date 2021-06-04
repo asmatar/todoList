@@ -8,10 +8,11 @@ function Header({todoObject}) {
 
     const handleTodo = (event) => {
         event.preventDefault();
-        console.log('je suis dans handle todo')
+
         todoObject({
-            id: Math.floor(Math.random() * 100),
-            text: inputValue
+            id: Math.floor(Math.random() * 1000),
+            text: inputValue,
+            isCompleted: false
         })
         setInputValue('')
     }

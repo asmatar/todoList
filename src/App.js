@@ -15,24 +15,29 @@ function App() {
     setTodos(newTodo)
   }
 
+
   const handleDelete = (id) => {
     console.log('je delete dans handle delete', id)
-
+    
     const deleteTodo = [...todos].filter(item => item.id !== id)
     setTodos(deleteTodo);
-  }
+  } 
+  
   
   const changeCompleted = (id) => {
-
+    // we've got the task's id, so we want to stock it in a variable
+ 
       const taskComplete = todos.findIndex(todo => todo.id === id)
       console.log('je suis dans chengecompleted', taskComplete, id)
-
+    // we copie todos to create a new todo list
       const newTaskCompleted = [...todos]
-
+      // for the task that we want to change, we copie it data, but adding is completed
       newTaskCompleted[taskComplete] ={
         ...newTaskCompleted[taskComplete],
-        isCompleted: true
+        isCompleted: !newTaskCompleted[taskComplete].isCompleted
+        
     }
+    // we give the new task list to setTodos to change the state
     setTodos(newTaskCompleted)
   }
 
